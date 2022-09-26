@@ -15,13 +15,13 @@ class AdminNews(admin.ModelAdmin):
     search_fields = ('title',)
 
     def get_photo(self, obj):
-        return mark_safe(f'<img src="{obj.image.url}" width="100"')
+        return mark_safe(f'<img src="{obj.preview.url}" width="100"')
 
 
 class ImageAdmin(admin.ModelAdmin):
-    list_display = ('id', 'get_photo', 'cat_id', 'post_id')
+    list_display = ('description', 'id', 'get_photo', 'cat_id', 'post_id')
     list_display_links = ('id', 'get_photo')
-    search_fields = ('cat_id', 'news_id')
+    search_fields = ('description', 'cat_id', 'news_id')
 
     def get_photo(self, obj):
         return mark_safe(f'<img src="{obj.image.url}" width="100"')
