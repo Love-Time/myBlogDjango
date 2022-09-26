@@ -1,0 +1,19 @@
+{%  load static %}
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/WD.svg' %}" alt="" class="logo">
+            </a>
+            <nav class="nav">
+                <ul class="nav__items">
+                    <li class="nav__iteam"><a href="{% url 'home' %}" class="link__item blue__item">ГЛАВНАЯ</a></li>
+                    <li class="nav__iteam"><a href="#" class="link__item">Спорт</a></li>
+                    <li class="nav__iteam"><a href="#" class="link__item">Университет</a></li>
+                    <li class="nav__iteam"><a href="#" class="link__item">Django</a></li>
+                    <li class="nav__iteam"><a href="#" class="link__item">Apex Legends</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

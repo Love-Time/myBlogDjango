@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block Title %}Главная страница {% endblock %}
+
+{% block Style %}
+<link rel="stylesheet" href="{% static  'css/index.css' %}">
+{% endblock Style %}
+
+<!DOCTYPE html>
+
+
+{% block Content %}
+<section class="section-1">
+    <div class="container">
+        <div class="center__content">
+            <img src="{% static 'img/Frame.svg' %}" alt="laptop">
+            <div class="right__content">
+                <h1 class="main__title">Дизайн и верстка</h1>
+                <p class="text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и <br> вэб-дизайне. Lorem
+                    Ipsum является стандартной "рыбой" для
+                    текстов <br> на латинице с начала XVI века.</p>
+                <a href="#" class="button"><span class="write__me">НАПИСАТЬ МНЕ</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-2">
+    <div class="container">
+        <div class="about__me__box">
+            <h2 class="about__me">Обо мне</h2>
+            <p class="text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и <br> вэб-дизайне. Lorem Ipsum
+                является стандартной "рыбой" для
+                текстов <br> на латинице с начала XVI века.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="section-3">
+    <div class="container">
+        <div class="quantity__project">
+            <ul class="project__items">
+                {% for i in range %}
+                <li class="project__item"><img src="{% static 'img/project.svg' %}" alt="project">
+                    <span class="numbers__project"><b>40+</b> <br>проектов </span>
+                    {% endfor %}
+
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="section-4">
+    <div class="container">
+        <div class="my__skills">
+            <div class="progress">
+                <h2 class="title_skills">Мои навыки</h2>
+
+                <label for="html" class="skill__name">HTML</label>
+                <progress max="100" value="95" id="html" class="progress__line"></progress>
+
+                <label for="html" class="skill__name">CSS</label>
+                <progress max="100" value="70" id="html2" class="progress__line"></progress>
+
+                <label for="html" class="skill__name">JS</label>
+                <progress max="100" value="30" id="html3" class="progress__line"></progress>
+
+                <label for="html" class="skill__name">English lang</label>
+                <progress max="100" value="10" id="html4" class="progress__line"></progress>
+
+            </div>
+            <div class="my__photo">
+                <img src="{% static 'img/IMG_20220906_001757_447.jpg'%}" alt="photo" class="photo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-5">
+    <div class="container">
+        <div class="main__my__work">
+            <div class="how__I__work">
+                <h2 class="title__work">Как я работаю</h2>
+                <p class="text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и <br> вэб-дизайне. Lorem
+                    Ipsum является стандартной "рыбой" для
+                    текстов <br> на латинице с начала XVI века.</p>
+
+            </div>
+            <div class="btn__play">
+                <img src="{% static 'img/Rectangle 5.svg' %}" alt="" class="coding">
+                <img src="{% static 'img/play-button.svg' %}" alt="" class="play__button">
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock Content %}
+
