@@ -13,9 +13,12 @@ ul{
     margin-top: 57px;
 }
 .container{
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
+
+
+
 
 .header__inner{
     display: flex;
@@ -249,4 +252,11 @@ ul{
     transform: translate(-50%, -50%);
     
     cursor: pointer;
+}
+
+@media (max-width:940px)
+{
+.nav__iteam {
+    margin-left: 5px;
+}
 }
